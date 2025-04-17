@@ -1,0 +1,6 @@
+projectKey=hapi-admin-panel
+serverUrl=http://localhost:9000
+serverVersion=25.4.0.105899
+dashboardUrl=http://localhost:9000/dashboard?id=hapi-admin-panel
+ceTaskId=b23c7f2b-00f5-4119-94c5-5fa242ecb384
+ceTaskUrl=http://localhost:9000/api/ce/task?id=b23c7f2b-00f5-4119-94c5-5fa242ecb384

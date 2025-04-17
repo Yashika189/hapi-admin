@@ -17,11 +17,19 @@ export const listHandler = async (_req: Request, h: ResponseToolkit) => {
 
 export const viewHandler = async (req: Request, h: ResponseToolkit) => {
   const subadmin = await getSubAdmin(req.params.id);
+  if (!subadmin) {
+    return h.response({ message: 'Subadmin not found' }).code(404);
+  }
+
   return h.response(subadmin);
 };
 
 export const updateHandler = async (req: Request, h: ResponseToolkit) => {
   const subadmin = await updateSubAdmin(req.params.id, req.payload);
+  if (!subadmin) {
+    return h.response({ message: 'Subadmin not found' }).code(404);
+  }
+
   return h.response(subadmin);
 };
 
